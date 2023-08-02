@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #logo {
+            cursor: pointer;
+        }
+        #center, #right, #left, #dot {
+            transition: all 1s ease;
+        }
+
+        #center {
+            opacity: 0;
+        }
+        #left {
+            transform: translateX(4.33px);
+        }
+        #right, #dot {
+            transform: translateX(-4.33px);
+        }
+        
+        #logo:hover #right, #logo:hover #dot {
+            transform: translateX(0px);
+        }
+        #logo:hover #left {
+            transform: translateX(0px);
+        }
+        #logo:hover #center {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="logo">
+    <path id="background" d="M0 25C0 27.7614 2.23858 30 5 30H25C27.7614 30 30 27.7614 30 25V5C30 2.23858 27.7614 7.40228e-07 25 7.40228e-07H5C2.23858 7.40228e-07 0 2.23858 0 5V25Z" fill="#B85042"/>
+    <g id="initials">
+    <g id="right">
+    <path id="path24" d="M19.5205 22.4076H22.2909C22.7393 22.4076 23.1028 22.0569 23.1028 21.6243V8.3747C23.1028 7.94213 22.7393 7.59139 22.2909 7.59139H19.5205V22.4076Z" fill="white"/>
+    </g>
+    <g id="dot">
+    <path id="path28" d="M17.3225 22.4078H19.0971V20.6958H18.1083C17.6743 20.6958 17.3225 21.0352 17.3225 21.4539V22.4078Z" fill="white"/>
+    </g>
+    <g id="center">
+    <path id="path36" d="M19.0971 13.4567H18.4338C17.6979 10.106 14.6145 7.59166 10.9219 7.59166C10.9081 7.59166 10.8945 7.5925 10.8806 7.59257V10.6809C10.8945 10.6808 10.9081 10.6799 10.9219 10.6799C13.395 10.6799 15.3999 12.6139 15.3999 14.9997C15.3999 17.3855 13.395 19.3196 10.9219 19.3196C10.9081 19.3196 10.8945 19.3186 10.8806 19.3185V22.4068C10.8945 22.4069 10.9081 22.4078 10.9219 22.4078C14.6142 22.4078 17.6974 19.8936 18.4336 16.5433H19.0971V13.4567Z" fill="white"/>
+    </g>
+    <g id="left">
+    <path id="path32" d="M7.67464 7.5919C7.23303 7.5919 6.87503 7.93727 6.87503 8.36322V21.6368C6.87503 22.0627 7.23303 22.4081 7.67464 22.4081H8.68266V21.4542C8.68266 21.0355 9.03452 20.6961 9.46858 20.6961H10.4573V7.5919H7.67464Z" fill="white"/>
+    </g>
+    </g>
+    </g>
+    </svg>
+  
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX</title>
+    <link
+      rel="stylesheet"
+      href="./assets/lib/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/template.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script src="./js/template.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header__wrapper header__wrapper_active">
+          <div class="header__panel">
+            <div class="header__logo">
+              <a href="#">
+                <img src="./assets/img/logo.png" alt="logo" />
+              </a>
+            </div>
+            <div class="header__hamburger">
+              <button>&#9776;</button>
+            </div>
+          </div>
+          <nav class="header__nav nav">
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Технология</a></li>
+              <li><a href="#">График полётов</a></li>
+              <li><a href="#">Гарантии</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="main__wrapper">
+          <div class="main__hero-text">
+            <div class="main__heading">
+              <h1>ПУТЕШЕСТВИЕ</h1>
+            </div>
+            <p class="main__paragraph">на красную планету</p>
+            <div class="main__button">
+              <button id="btn-start-journey">Начать путешествие</button>
+              <svg
+                id="path-to-rocket"
+                width="406"
+                height="72"
+                viewBox="0 0 406 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="406" height="71.7091" fill="url(#pattern0)" />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_302_3"
+                      transform="scale(0.00246305 0.0172414)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_302_3"
+                    width="406"
+                    height="58"
+                    xlink:href="data:image/png;base64,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"
+                  />
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div class="main__stats stats">
+            <div class="stats__block">
+              <div>
+                <span>мы</span>
+                <p>1</p>
+                <span>на рынке</span>
+              </div>
+            </div>
+            <div class="stats__block">
+              <div>
+                <span>гарантируем</span>
+                <p>50%</p>
+                <span>безопасность</span>
+              </div>
+            </div>
+            <div class="stats__block">
+              <div>
+                <span>календарик за </span>
+                <p>2001<small>г.</small></p>
+                <span>в подарок</span>
+              </div>
+            </div>
+            <div class="stats__block">
+              <div>
+                <span>путешествие</span>
+                <p>597</p>
+                <span>дней</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main -->
+
+    <!-- modal -->
+    <div class="modal" id="modal_1">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <span id="close-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25px"
+              height="25px"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="none"
+                stroke="#db621b"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="m10.25 5.75l-4.5 4.5m0-4.5l4.5 4.5m-7.5-7.5h10.5v10.5H2.75z"
+              />
+            </svg>
+          </span>
+          <p class="modal__heading">Готовы к полёту?</p>
+          <button id="fill-form-btn">Заполнить форму</button>
+          <form method="post" class="form" id="reg-form">
+            <span class="form__client-status"></span>
+            <div class="form__row">
+              <div class="form__field">
+                <label> Имя </label>
+                <input
+                  type="text"
+                  name="first-name"
+                  required
+                  autocomplete="off"
+                  placeholder="Иван"
+                  class="form__name-input"
+                />
+              </div>
+              <div class="form__field">
+                <label> Фамилия </label>
+                <input
+                  type="text"
+                  name="second-name"
+                  required
+                  autocomplete="off"
+                  placeholder="Иванов"
+                  class="form__name-input"
+                />
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label> Телефон или эл. почта </label>
+              <span class="form__validation-input"></span>
+              <input
+                type="text"
+                name="contacts"
+                required
+                autocomplete="off"
+                placeholder="+7 999 999999 или forex@mple.com"
+                class="form__versatile-input"
+              />
+            </div>
+
+            <div class="form__field">
+              <label> Сообщение </label>
+              <textarea
+                required
+                name="message"
+                class="form__textarea"
+              ></textarea>
+            </div>
+            <button type="submit" class="button">Отправить форму</button>
+          </form>
+          <span class="form__server-status"></span>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+  </body>
+</html>

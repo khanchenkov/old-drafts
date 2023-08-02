@@ -1,0 +1,447 @@
+body {
+  background-color: #ebebeb;
+  font-family: "MuseosanscyrlRegular", "Roboto", sans-serif;
+}
+@font-face {
+  font-family: "MuseosanscyrlRegular";
+  src: url("../assets/font/Museo/museosanscyrl-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MuseosanscyrlLight";
+  src: url("../assets/font/Museo/museosanscyrl-300.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MuseosanscyrlThin";
+  src: url("../assets/font/Museo/museosanscyrl-100.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* ---------------- VARIABLES(START) ---------------- */
+:root {
+  --success-color: #00ff7f;
+  --warning-color: #dc143c;
+  --secondary-color: #db621b;
+  --secondary-lighten-color: #e46f2a;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --red-radient-color: #e34234;
+}
+.hide {
+  display: none;
+}
+/* ---------------- VARIABLES(START) ---------------- */
+
+/* ----------------1. HEADER(START)----------------  */
+.header {
+  background-color: rgba(0, 0, 0, 0.21);
+  position: fixed;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 99;
+}
+.header__logo {
+  height: 99px;
+  padding: 25px 20px 20px 25px;
+  background: linear-gradient(to right, var(--white-color) 1px, transparent 1px)
+      0 0,
+    linear-gradient(to right, var(--white-color) 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, var(--white-color) 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, var(--white-color) 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, var(--white-color) 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, var(--white-color) 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, var(--white-color) 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, var(--white-color) 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+  width: 319px;
+  float: left;
+}
+.header__nav {
+  height: 40px;
+  line-height: 100px;
+  margin: 0 -2px 0 auto;
+  width: 754.95px;
+}
+.header__nav ul {
+  list-style-type: none;
+  margin: 0 -2px 0 auto;
+  width: 754.95px;
+}
+.header__nav ul li {
+  display: inline-block;
+  margin: 0 0 0 36px;
+}
+.header__nav ul li a {
+  font: 16px/40px "MuseosanscyrlThin", "Roboto", sans-serif;
+  color: var(--white-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.header__nav ul li:hover a {
+  color: #bbb;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #bbb;
+}
+.header__hamburger button {
+  display: none;
+}
+.header__hamburger button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--white-color);
+}
+
+/* ----------------1. HEADER(END)----------------  */
+
+/* ----------------2. MAIN(START)----------------  */
+.main {
+  background-image: url("../assets/img/background.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 660px;
+  height: 100vh;
+}
+.main__hero-text {
+  padding-top: 10px;
+  float: left;
+}
+.main__heading h1 {
+  font-size: calc(40px + (72 - 40) * ((100vw - 320px) / (1920 - 320)));
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--white-color),
+    var(--red-radient-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main__paragraph {
+  font-size: 25px;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--white-color),
+    var(--red-radient-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 80px;
+}
+.main__button button {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "MuseosanscyrlThin", sans-serif;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: 1px solid skyblue;
+  -o-border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image-slice: 1;
+  z-index: 8999;
+}
+.main__button button:hover {
+  color: var(--white-color);
+}
+.main__button button:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-color: var(--white-color);
+  border-style: solid;
+  top: -1px;
+  right: -1px;
+  border-width: 1px 1px 0 0;
+  box-shadow: 1px -1px 1px 0px rgba(255, 255, 255, 0.7);
+}
+.main__button button:before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-color: var(--white-color);
+  border-style: solid;
+  bottom: -1px;
+  left: -1px;
+  border-width: 0 0 1px 1px;
+  box-shadow: -1px 1px 1px 0px rgba(255, 255, 255, 0.7);
+}
+#path-to-rocket {
+  margin-top: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(calc(-50% - 202px));
+}
+.stats {
+  z-index: 99;
+  width: 550px;
+  margin-left: auto;
+}
+.stats__block {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: 1px solid transparent;
+  width: calc(50% - 5px);
+  height: 200px;
+  -o-border-image: linear-gradient(
+    to right bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image: linear-gradient(
+    to right bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.stats__block:nth-child(odd) {
+  margin: 0 6.5px 0px 0;
+}
+.stats__block > div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.stats__block:nth-child(1) {
+  float: left;
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  transition: 0.2s;
+}
+.stats__block:nth-child(1):hover {
+  cursor: pointer;
+  -o-border-image: linear-gradient(
+    to right bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 90%
+  );
+  border-image: linear-gradient(
+    to right bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image-slice: 1;
+}
+.stats__block:nth-child(2) {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  transition: 0.2s;
+}
+.stats__block:nth-child(2):hover {
+  cursor: pointer;
+  -o-border-image: linear-gradient(
+    to left bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image: linear-gradient(
+    to left bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image-slice: 1;
+}
+.stats__block:nth-child(3) {
+  float: left;
+  background: linear-gradient(
+    -135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  transition: 0.2s;
+}
+.stats__block:nth-child(3):hover {
+  cursor: pointer;
+  -o-border-image: linear-gradient(
+    to left bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image: linear-gradient(
+    to right top,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image-slice: 1;
+}
+.stats__block:nth-child(4) {
+  background: linear-gradient(
+    -215deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  transition: 0.2s;
+}
+.stats__block:nth-child(4):hover {
+  cursor: pointer;
+  -o-border-image: linear-gradient(
+    to left bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image: linear-gradient(
+    to left top,
+    transparent 0%,
+    transparent 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-image-slice: 1;
+}
+
+.stats__block p {
+  font-size: 45px;
+  line-height: 1;
+  margin: 0 0;
+  padding: 0;
+}
+.stats__block p small {
+  font-size: 20px;
+}
+.stats__block span {
+  font-size: 16px;
+  font-family: "MuseosanscyrlThin", sans-serif;
+}
+/* ----------------2. MAIN(END)----------------  */
+
+/* ----------------3. MODAL_1(START)---------------- */
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+  z-index: 9999;
+  display: block;
+}
+.modal.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+.modal__wrapper {
+  margin: 100px auto;
+  width: 90%;
+  max-width: 460px;
+}
+.modal__content {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid skyblue;
+  font-family: "MuseosanscyrlThin", sans-serif;
+  -o-border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image-slice: 1;
+  color: #ffffff;
+}
+.modal__content p {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.modal__content #fill-form-btn {
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid skyblue;
+  width: 100%;
+  -o-border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image: linear-gradient(to right top, #223f64, #0b1a2d, #223f64);
+  border-image-slice: 1;
+  color: #ffffff;
+}
+.modal__content #close-btn {
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.form {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.form.show-form {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.form__row > div:first-child {
+  float: left;
+}
+.form__row > div:last-child {
+  float: right;
+}
+.form__field label {
+  display: block;
+  font-size: 12px;
+}
+.form__field input,
+.form__field textarea {
+  font-family: "MuseosanscyrlRegular", sans-serif;
+  color: var(--black-color);
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.form button {
+  font-family: "MuseosanscyrlRegular", sans-serif;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 10px;
+}
+.form button:hover {
+  background-color: var(--secondary-lighten-color);
+}
+.form__server-status {
+  text-align: center;
+  display: block;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+.form__client-status {
+  color: var(--warning-color);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+/* ----------------3. MODAL_1(END)---------------- */

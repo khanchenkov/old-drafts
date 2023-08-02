@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --dark-color: #635bff;
+            --light-color: #80e9ff;
+        }
+        svg {
+            cursor: pointer;
+        }
+        #blue {
+            fill: var(--dark-color);
+        }
+        #green {
+            fill: var(--light-color);
+        }
+        #green_1, #blue_1, #blue_2 {
+            transition: all 1s ease;
+        }
+        /* #blue_2 {
+            transform: translateX(-30%);
+            opacity: 0;
+        }
+        svg:hover #green_1 {
+            transform: translateX(20%);   
+        }
+        svg:hover #blue_1 {
+            transform: translateX(40%);
+            opacity:  0;
+        }
+        svg:hover #blue_2 {
+            transform: translateX(0%);
+            opacity: 1;
+        } */
+
+        @keyframes goBlue_1 {
+            from {
+                transform: translateX(0%);
+                opacity:  1;
+            }
+            to {
+                transform: translateX(40%);
+                opacity:  0;
+            }
+        }
+        @keyframes goBlue_2 {
+            from {
+                transform: translateX(-30%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+        @keyframes goGreen_1 {
+            from {
+                transform: translateX(0%);   
+            }
+            to {
+                transform: translateX(20%);   
+            }
+        }
+        #blue_1 {
+            animation: goBlue_1 1.5s infinite;
+            animation-delay: 200ms;
+        }
+        #blue_2 {
+            animation: goBlue_2 1.5s infinite;
+        }
+        #green_1 {
+            animation: goGreen_1 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <svg view-box="0 0 100 100"> -->
+        <!-- <rect x="10" y="23" width="20" height="20" /> -->
+        <!-- <circle cx="50" cy="50" r="50" /> -->
+        <!-- <path d="M54 20 L20 23 Z" /> -->
+    <!-- </svg> -->
+
+    <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="triangles" clip-path="url(#clip0)">
+            <g id="green">
+                <path id="green_1" opacity="0.7" d="M48 48.268C49.3333 49.0378 49.3333 50.9623 48 51.7321L13.5 71.6506C12.1667 72.4204 10.5 71.4582 10.5 69.9186L10.5 30.0814C10.5 28.5418 12.1667 27.5796 13.5 28.3494L48 48.268Z"/>
+            </g>
+            <g id="blue">
+                <path id="blue_1" opacity="0.7" d="M63 48.268C64.3333 49.0378 64.3333 50.9623 63 51.7321L28.5 71.6506C27.1667 72.4204 25.5 71.4582 25.5 69.9186L25.5 30.0814C25.5 28.5418 27.1667 27.5796 28.5 28.3494L63 48.268Z"/>
+                <path id="blue_2" opacity="0.7" d="M48 48.268C49.3333 49.0378 49.3333 50.9623 48 51.7321L13.5 71.6506C12.1667 72.4204 10.5 71.4582 10.5 69.9186L10.5 30.0814C10.5 28.5418 12.1667 27.5796 13.5 28.3494L48 48.268Z"/>
+            </g>
+        </g>
+        <defs>
+            <clipPath id="clip0">
+                <rect width="120" height="100" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+    
+    <script>
+        const svg = document.querySelector('#triangles')
+        // svg.onclick
+        const changing = (e) => {
+            const colors = ['red', 'blue', 'green', 'orange', 'pink', 'purple']
+            const rando = () => colors[Math.floor(Math.random() * colors.length)]
+            document.documentElement.style.cssText = `
+            --dark-color: ${rando()};
+            --light-color: ${rando()};
+            `
+        }
+        setInterval(changing, 500)
+
+    </script>
+
+</body>
+</html>

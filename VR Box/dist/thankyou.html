@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- метатеги -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Очки виртуальной реальности VR Box II от производителя за 2390 р!</title>
+
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 offset-lg-0 col-md-9 offset-md-0 col-sm-10 offset-sm-1 col-12">
+            <div class="banner_logo">
+              <img src="img/logo.png" alt="Лого">
+              <p>Производство и продажа VR очков. <br>
+                Доставка по всей России. </p>
+            </div>
+          </div>
+          <div class="col-lg-2 offset-lg-3 col-md-3 offset-md-0 col-sm-10 offset-sm-1 col-12">
+            <div class="banner_phone">
+              <p>+79104551703</p>
+              <a href="#" class="popup-call">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.banner -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3">
+          <div class="thankyou-heading">
+            <h1>Спасибо за заявку</h1>
+            <p>Мы свяжемся с вами и уточним 
+              все детали заявки. Если у вас срочный вопрос
+              позвоните по тел. : +79104551703 </p>
+            <div class="btn-back">
+              <a href="index.html">Вернуться на сайт</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+
+    <!-- modals -->
+    <!-- заказать звонок -->
+    <div class="popup">
+      <div class="popup-dialog"> 
+        <!-- wrapper -->
+        <div class="popup-content">
+          <!-- Окошко -->
+          <button class="popup-close"><span>&times; </span></button>
+          <h4 class="popup-header">
+            Введите ваши данные <br> и нажмите заказать звонок 
+          </h4>
+          <div class="popup-form">
+            <form class="form" action="#">
+              <p><input type="text" placeholder="Введите имя"></p>
+              <p><input type="tel" placeholder="Введите телефон"></p>
+              <button class="btn popup-btn" type="submit">Заказать звонок</button>
+            </form>
+          </div>
+          <small>Перезвоним в течение 10 минут</small>
+        </div>
+      </div>
+    </div>
+
+  <!-- подключение библиотек и фреймворков -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Скрипты -->
+  <script>
+    $('.popup-call').on('click', function(event) {
+      $('.popup').fadeIn();
+    });
+    $('.popup-close').on('click', function(event) {
+      $('.popup').fadeOut();
+    });
+  </script>
+</body>
+</html>

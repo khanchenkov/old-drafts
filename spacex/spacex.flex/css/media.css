@@ -1,0 +1,206 @@
+/* ---------------- MEDIA(START) ---------------- */
+
+@media screen and (max-width: 1400px) {
+  .stats {
+    width: 350px;
+  }
+  .stats__block {
+    height: 185px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .header__nav ul li {
+    margin: 0 0 0 20px;
+  }
+  .header__nav ul li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    height: 50px;
+  }
+  .header__wrapper {
+    flex-direction: column;
+  }
+  .header__hamburger button {
+    display: block;
+  }
+  .header__nav ul {
+    display: none;
+  }
+  .header__nav ul li a {
+    font-size: 20px;
+    border-bottom: 1px solid var(--white-color);
+  }
+  .header__panel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .header__logo {
+    height: 49px;
+    padding: 10px 15px 0px;
+  }
+  .header__panel img {
+    width: 100px;
+  }
+  .header_active {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+  }
+  .header_active .header__nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    font-family: "MuseosanscyrlBold", "Roboto", sans-serif;
+  }
+  .main__button svg {
+    display: none;
+  }
+  .stats {
+    width: 100%;
+  }
+  .main__button img {
+    transform: scaleX(0.5);
+    top: 20px;
+    left: 45px;
+  }
+  .main__wrapper {
+    flex-direction: column;
+  }
+  .main__heading {
+    text-align: center;
+  }
+  .main__button button {
+    display: block;
+    margin: 0 auto 30px;
+    width: 190px;
+  }
+  .main__button img {
+    display: none;
+  }
+  .main__paragraph {
+    text-align: center;
+    display: block;
+    margin: 0 0 30px;
+  }
+  .stats__block {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+  }
+  .main__hero-text {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 993px) {
+  @media screen and (max-height: 659px) {
+    .main__wrapper {
+      padding-top: 120px;
+    }
+    .stats__block {
+      height: 130px;
+    }
+  }
+  @media screen and (min-height: 659px) {
+    .main__wrapper {
+      padding-top: 120px;
+    }
+  }
+  @media screen and (min-height: 850px) {
+    .main__wrapper {
+      padding-top: 150px;
+    }
+  }
+  @media screen and (min-height: 950px) {
+    .main__wrapper {
+      padding-top: 170px;
+    }
+  }
+  @media screen and (min-height: 1100px) {
+    .main__wrapper {
+      padding-top: 200px;
+    }
+  }
+  @media screen and (min-height: 1250px) {
+    .main__wrapper {
+      padding-top: 230px;
+    }
+  }
+  @media screen and (min-height: 1450px) {
+    .main__wrapper {
+      padding-top: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  @media screen and (max-height: 659px) {
+    .main__wrapper {
+      padding-top: 170px;
+    }
+  }
+  @media screen and (min-height: 659px) {
+    .main__wrapper {
+      padding-top: 150px;
+    }
+  }
+  @media screen and (min-height: 748px) {
+    .main__wrapper {
+      padding-top: 205px;
+    }
+  }
+  @media screen and (min-height: 842px) {
+    .main__wrapper {
+      padding-top: 270px;
+    }
+  }
+  @media screen and (min-height: 950px) {
+    .main__wrapper {
+      padding-top: 345px;
+    }
+  }
+  @media screen and (min-height: 1062px) {
+    .main__wrapper {
+      padding-top: 420px;
+    }
+  }
+  @media screen and (min-height: 1193px) {
+    .main__wrapper {
+      padding-top: 510px;
+    }
+  }
+  @media screen and (min-height: 1321px) {
+    .main__wrapper {
+      padding-top: 600px;
+    }
+  }
+  @media screen and (min-height: 1480px) {
+    .main__wrapper {
+      padding-top: 650px;
+    }
+  }
+  @media screen and (min-height: 1570px) {
+    .main__wrapper {
+      padding-top: 710px;
+    }
+  }
+  @media screen and (min-height: 1660px) {
+    .main__wrapper {
+      padding-top: 770px;
+    }
+  }
+  @media screen and (min-height: 1770px) {
+    .main__wrapper {
+      padding-top: 840px;
+    }
+  }
+  @media screen and (min-height: 1870px) {
+    .main__wrapper {
+      padding-top: 920px;
+    }
+  }
+}
+/* ---------------- MEDIA(END) ---------------- */
